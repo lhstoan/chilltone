@@ -227,3 +227,13 @@ body {
 body#tinymce {
     margin: 15px;
 }
+
+@font-face {
+    font-family: 'FatFrank';
+    src: url('/fonts/FatFrank-Heavy.woff') format('woff2'),
+        url('/fonts/FatFrank-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+

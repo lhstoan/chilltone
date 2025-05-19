@@ -3,76 +3,63 @@
 /*==========================================================================*/
 
 header {
-    // position: relative;
-    position: fixed;
-    width: 100%;
-    max-width: 1920px;
-    margin-left: auto;
-    margin-right: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #fff;
-    z-index: 99;
+	// position: relative;
+	position: fixed;
+	width: 100%;
+	max-width: 1920px;
+	margin-left: auto;
+	margin-right: auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: #fff;
+	z-index: 99;
+	height: 100px;
 }
+.iHeader {
+	position: relative;
+	background-color: #000001;
+	display: flex;
+	justify-content: space-between;
+	height: 100%;
+	padding: 10px 50px;
+	&--logo {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		img{
+			height: 100%;
+		}
+	}
+	&--menu {
+		position: relative;
+		display: flex;
+		align-items: center;
+		height: 100%;
+		ul {
+			position: relative;
+			display: flex;
+			align-items: center;
+			gap: 20px;
+			li {
+				position: relative;
 
-.wr-hd {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 90px;
-}
-
-.sticky-sidebar {
-    position: fixed;
-    z-index: 98;
-    top: 50%;
-    right: 0;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    transform: translateY(-50%);
-
-    .sticky-it {
-        display: flex;
-        position: relative;
-        text-align: center;
-        margin-bottom: 10px;
-        height: 100px;
-        transition: 1s;
-        -webkit-transition: 1s;
-        -moz-transition: 1s;
-        -o-transition: 1s;
-        transform: translateX(calc(100% - 73px));
-
-        a {
-            position: absolute;
-            display: block;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-        }
-
-        .sticky-b1 {
-            width: 73px;
-            background-color: #06c755;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .sticky-b2 {
-            border: 1px solid #06c755;
-            background-color: #fff;
-            display: flex;
-            align-items: center;
-            padding: 0 27px;
-
-            .tit {
-                font-size: 18px;
-                font-weight: bold;
-            }
-        }
-    }
+				a {
+					position: relative;
+					text-transform: uppercase;
+					display: inline-block;
+					text-decoration: none;
+					font-family: 'FatFrank';
+					font-weight: 400;
+					font-style: normal;
+					font-size: 20px;
+					color: #fff;
+					&:hover{
+						color: #e8da5d ;
+					}
+				}
+			}
+		}
+	}
 }

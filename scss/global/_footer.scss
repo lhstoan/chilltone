@@ -1,0 +1,15 @@
+/*==========================================================================*/
+/*                              F O O T E R                                 */
+/*==========================================================================*/
+
+address {
+    text-align: center;
+    background-color: var(--color-black);
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.5em;
+    padding: 20px 15px;
+    a {
+        color: inherit;
+    }
+}

@@ -14,7 +14,7 @@ header {
 	right: 0;
 	background-color: #fff;
 	z-index: 99;
-	height: 100px;
+	height: 103px;
 }
 .iHeader {
 	position: relative;
@@ -29,7 +29,7 @@ header {
 		align-items: center;
 		justify-content: center;
 		img{
-			height: 100%;
+			height: 50px;
 		}
 	}
 	&--menu {
@@ -63,3 +63,4 @@ header {
 		}
 	}
 }
+

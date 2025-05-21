@@ -143,6 +143,7 @@ body {
   min-width: 320px;
   -webkit-text-size-adjust: none;
   color: var(--body-color);
+  font-family: "FatFrank";
 }
 
 #wrapper {
@@ -819,7 +820,7 @@ header {
 }
 
 #artists main {
-  background-color: #E7E2D3 !important;
+  background-color: #e7e2d3 !important;
 }
 
 main {
@@ -1014,6 +1015,122 @@ main {
   font-size: 16px;
   font-family: "FatFrank";
   line-height: 1em;
+}
+
+.iBack {
+  position: relative;
+  background-color: #7a7231;
+}
+.iBack--wrap {
+  position: relative;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding: 30px 0;
+}
+.iBack a {
+  position: relative;
+  color: #fff;
+  font-family: "FatFrank";
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 1em;
+  letter-spacing: 0.1em;
+  padding-left: 20px;
+}
+.iBack a::before {
+  position: absolute;
+  content: "";
+  border-top: 8px solid transparent;
+  border-right: 10px solid #fff;
+  border-bottom: 8px solid transparent;
+  left: 0;
+  top: 2px;
+}
+
+.iDetail {
+  position: relative;
+}
+.iDetail--img {
+  position: relative;
+  padding: 80px 0;
+  text-align: center;
+}
+.iDetail--img img {
+  max-height: 450px;
+}
+.iDetail--link {
+  position: relative;
+  padding: 30px 0;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  background-color: #7a7231;
+}
+.iDetail--link li {
+  position: relative;
+}
+.iDetail--link li::before {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -10px;
+  background-color: #fff;
+  user-select: none;
+  pointer-events: none;
+}
+.iDetail--link li:last-child::before {
+  content: none;
+}
+.iDetail--link a {
+  font-size: 20px;
+  font-family: "FatFrank";
+  position: relative;
+  display: block;
+  line-height: 1em;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 0.05em;
+}
+.iDetail--link a:hover {
+  color: #e8da5d;
+}
+.iDetail--desc {
+  position: relative;
+  padding: 50px 0;
+  background-color: #111111;
+}
+.iDetail--desc p {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 1.1em;
+}
+.iDetail--wrap {
+  position: relative;
+  max-width: 1440px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.marquee {
+  overflow: hidden;
+  display: flex;
+  background-color: #e8da5d;
+  color: #111111;
+  gap: 60px;
+  padding: 20px 0px;
+}
+.marquee span {
+  position: relative;
+  display: block;
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 /*==========================================================================*/

@@ -9,10 +9,9 @@
 ::-webkit-scrollbar {
 	display: none;
 }
-#artists{
-	main{
-		background-color: #E7E2D3 !important;
-
+#artists {
+	main {
+		background-color: #e7e2d3 !important;
 	}
 }
 main {
@@ -97,7 +96,7 @@ main {
 		margin-right: auto;
 		max-width: 1700px;
 		width: 100%;
-		&.min{
+		&.min {
 			max-width: 1440px;
 		}
 	}
@@ -118,12 +117,12 @@ main {
 
 		&.async {
 			flex-wrap: wrap;
-			
+
 			--gap: 40px;
 		}
 		li {
 			position: relative;
-			width: calc(100% / 4 -  var(--gap));
+			width: calc(100% / 4 - var(--gap));
 			overflow: hidden;
 			transition: all 0.3s ease-in-out;
 			line-height: 1em;
@@ -211,4 +210,122 @@ main {
 	font-size: 16px;
 	font-family: "FatFrank";
 	line-height: 1em;
+}
+
+.iBack {
+	position: relative;
+	background-color: #7a7231;
+	&--wrap {
+		position: relative;
+		max-width: 1440px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+		padding: 30px 0;
+	}
+	a {
+		position: relative;
+		color: #fff;
+		font-family: "FatFrank";
+		text-decoration: none;
+		font-size: 18px;
+		line-height: 1em;
+		letter-spacing: 0.1em;
+		padding-left: 20px;
+		&::before {
+			position: absolute;
+			content: "";
+			border-top: 8px solid transparent;
+			border-right: 10px solid #fff;
+			border-bottom: 8px solid transparent;
+			left: 0;
+			top: 2px;
+		}
+	}
+}
+
+.iDetail {
+	position: relative;
+	&--img {
+		position: relative;
+		padding: 80px 0;
+		text-align: center;
+		img {
+			max-height: 450px;
+		}
+	}
+	&--link {
+		position: relative;
+		padding: 30px 0;
+		display: flex;
+		gap: 20px;
+		justify-content: center;
+		background-color: #7a7231;
+		li {
+			position: relative;
+			&::before {
+				position: absolute;
+				content: "";
+				width: 1px;
+				height: 100%;
+				top: 50%;
+				transform: translateY(-50%);
+				right: -10px;
+				background-color: #fff;
+				user-select: none;
+				pointer-events: none;
+			}
+			&:last-child {
+				&::before {
+					content: none;
+				}
+			}
+		}
+		a {
+			font-size: 20px;
+			font-family: "FatFrank";
+			position: relative;
+			display: block;
+			line-height: 1em;
+			text-decoration: none;
+			color: #fff;
+			letter-spacing: 0.05em;
+			&:hover {
+				color: #e8da5d;
+			}
+		}
+	}
+	&--desc {
+		position: relative;
+		padding: 50px 0;
+		background-color: #111111;
+		p {
+			color: #fff;
+			font-size: 16px;
+			margin-bottom: 1.1em;
+		}
+	}
+	&--wrap {
+		position: relative;
+		max-width: 1440px;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.marquee {
+	overflow: hidden;
+	display: flex;
+	background-color: #e8da5d;
+	color: #111111;
+	gap: 60px;
+	padding: 20px 0px;
+	span {
+		position: relative;
+		display: block;
+		font-size: 40px;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+	}
 }

@@ -9,7 +9,15 @@ require_once( dirname( __FILE__ ) . '/includes/shortcode.php' );
 // Post-type declaration
 require_once( dirname( __FILE__ ) . '/includes/create_posttype.php' );
 
-
+if (function_exists('acf_add_options_page')) {
+    acf_add_options_page([
+        'page_title'  => 'Theme Settings',
+        'menu_title'  => 'Theme Settings',
+        'menu_slug'   => 'theme-settings',
+        'capability'  => 'edit_posts',
+        'redirect'    => false
+    ]);
+}
 
 /* ========================================================================= */
 /* =========================== EMBEDED RESOURCES =========================== */
@@ -76,4 +84,20 @@ function set_query_parameters($query) {
 // add_action( 'pre_get_posts', 'set_query_parameters' );
 /* ============== /////////////////////////////////////////// ============== */
 /* ========================================================================= */
+
+add_action('pre_delete_post', 'prevent_delete_home_page');
+
+function prevent_delete_home_page($post_id) {
+  if ((int)$post_id === 62) {
+    wp_die('The HOME PAGE cannot be deleted.');
+  }
+}
+add_action('admin_head-post.php', function() {
+  global $post;
+  if ($post && $post->ID == 62) {
+    echo '<style>
+      #delete-action, .submitdelete { display: none !important; }
+    </style>';
+  }
+});
 ?>

@@ -14,18 +14,20 @@
 		background-color: #e7e2d3 !important;
 	}
 }
+
 main {
 	margin-top: 103px;
 	position: relative;
 	width: 100%;
 	background-color: #333;
+	min-height: 100vh;
 }
 
 .iMainvisual {
 	position: relative;
 	height: calc(100vh - 100px);
 	background-color: #e8da5d;
-	background-image: url(../../images/bg-home.jpg);
+	background-image: url(../images/bg-home.jpg);
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -42,15 +44,15 @@ main {
 	}
 	&--img {
 		position: relative;
-		width: 510px;
+		width: calc(510px / 1920px * 100vw);
 	}
 	&--content {
 		position: relative;
 		text-align: center;
 		color: #fff;
-		font-size: 36px;
+		font-size: calc(36px / 1920px * 100vw);
 		width: calc(100% - 510px - 50px);
-		left: 64px;
+		left: calc(64px / 1920px * 100vw);
 
 		h2 {
 			position: relative;
@@ -86,7 +88,7 @@ main {
 
 .iList {
 	position: relative;
-	padding: 70px 0;
+	padding: 70px 15px;
 	&.bg2 {
 		background-color: #111111;
 	}
@@ -128,11 +130,14 @@ main {
 			line-height: 1em;
 			display: flex;
 			flex-direction: column;
+			height: 350px;
 			* {
 				transition: all 0.3s ease-in-out;
 			}
 			img {
 				object-fit: cover;
+				width: 100%;
+				height: 100%;
 			}
 			&::before {
 				position: absolute;
@@ -166,7 +171,7 @@ main {
 	&--img {
 		position: relative;
 		width: 100%;
-
+		height: 300px;
 		img {
 			width: 100%;
 			height: 100%;

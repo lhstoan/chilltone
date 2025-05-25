@@ -2,12 +2,12 @@
 /*                              F O O T E R                                 */
 /*==========================================================================*/
 
-.iFooter{
+.iFooter {
 	position: relative;
 	background-color: #333;
 	padding: 50px 0;
 	border-top: 1px solid #fff;
-	&--link{
+	&--link {
 		position: relative;
 		display: flex;
 		margin: 0 0;
@@ -15,28 +15,31 @@
 		justify-content: center;
 		gap: 40px;
 		margin-bottom: 50px;
-		li{
+		li {
 			position: relative;
 		}
-		a{
+		a {
 			position: relative;
 			text-transform: uppercase;
 			color: #fff;
 			text-decoration: none;
 			font-family: "FatFrank";
 			font-size: 20px;
+			&:hover {
+				color: #ffcc00;
+			}
 		}
 	}
-	&--logo{
+	&--logo {
 		position: relative;
 		display: flex;
 		justify-content: center;
 		margin-bottom: 20px;
-		img{
+		img {
 			height: 60px;
 		}
 	}
-	&--copyright{
+	&--copyright {
 		position: relative;
 		text-align: center;
 		color: #fff;

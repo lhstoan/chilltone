@@ -1,0 +1,120 @@
+/*! Zabuto Calendar - v2.1.0 - 2022-12-29
+* https://github.com/zabuto/calendar
+* Copyright (c) 2022 Anke Heijnen; Licensed MIT */
+.under main .zabuto-calendar {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+}
+
+.zabuto-calendar__navigation__item--next,.zabuto-calendar__navigation__item--prev {
+    text-align: center;
+    cursor: pointer;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.zabuto-calendar__navigation__item--header {
+    text-align: center
+}
+
+.zabuto-calendar__navigation__item--header__title {
+    font-weight: bolder
+}
+
+.zabuto-calendar__days-of-week__item {
+    text-align: center
+}
+
+.zabuto-calendar__day {
+    text-align: center
+}
+
+.zabuto-calendar__day--today {
+    text-align: center
+}
+
+.zabuto-calendar.table td,.zabuto-calendar.table th {
+    vertical-align: middle
+}
+
+.zabuto-calendar.table thead td {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    background-color: #fafafa
+}
+
+.zabuto-calendar.table-bordered thead td {
+    border: 0
+}
+
+.zabuto-calendar.table thead th {
+    background-color: #f0f0f0
+}
+
+.zabuto-calendar.table>thead:first-child>tr:first-child>td {
+    border-top: 1px solid #ddd
+}
+
+.zabuto-calendar.table>thead>tr>th {
+    border-bottom: 2px solid #ddd
+}
+
+.zabuto-calendar.table>tbody td {
+    width: calc(100% / 7)
+}
+
+.zabuto-calendar.table>tbody>tr:last-child>td {
+    border-bottom: 1px solid #ddd
+}
+
+.zabuto-calendar.table>tbody td .badge {
+    font-size: 100%
+}
+
+.zabuto-calendar.clickable>tbody td {
+    cursor: pointer
+}
+
+.zabuto-calendar.table.clickable>tbody td:hover {
+    background-color: #f0f0f0
+}
+
+.under main table.zabuto-calendar th, .under main table.zabuto-calendar td {
+    padding: 5px;
+    text-align: center;
+    border-width: thin;
+}
+
+.under main table.zabuto-calendar th {
+    font-size: 14px;
+    border-right: 1px solid var(--mcolor);
+    border-bottom: 1px solid var(--mcolor);
+}
+.under main table.zabuto-calendar tr:last-child th,.under main table.zabuto-calendar tr th:last-child, .under main table.zabuto-calendar tr:last-child td{border-bottom: 1px solid var(--mcolor);}
+.zabuto-calendar__navigation__item--next, .zabuto-calendar__navigation__item--prev ,.zabuto-calendar__day,.under main table.zabuto-calendar .zabuto-calendar__event,.under main table.zabuto-calendar .zabuto-calendar__day--today {
+    text-align: center;
+    cursor: pointer;
+}
+
+.zabuto-calendar__day:hover {
+    background: var(--scolor);
+    color: #fff
+}
+
+.under main table.zabuto-calendar .zabuto-calendar__event {
+    background: var(--scolor);
+    color: #fff
+}
+.under main table.zabuto-calendar .zabuto-calendar__days-of-week__item{background: var(--mcolor);color:#fff}
+.under main table.zabuto-calendar .zabuto-calendar__days-of-week__item:not(:last-child){border-right: 1px solid #fff}
+@media screen and (min-width: 751px) {
+    .zabuto-calendar__navigation__item--next:hover,.zabuto-calendar__navigation__item--prev:hover {
+        color: var(--scolor);
+    }
+
+    .under main table.zabuto-calendar .zabuto-calendar__day--today {
+        background: var(--mcolor);
+        color: #fff
+    }
+}

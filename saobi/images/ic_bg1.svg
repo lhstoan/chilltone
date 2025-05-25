@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="67" height="67" viewBox="0 0 67 67">
+  <g id="Group_3035" data-name="Group 3035" transform="translate(-9680 -2048)">
+    <rect id="Rectangle_895" data-name="Rectangle 895" width="67" height="67" rx="7" transform="translate(9680 2048)" fill="#F28757"/>
+    <path id="Line_21" data-name="Line 21" d="M23.068,25.068a1.994,1.994,0,0,1-1.414-.586L-1.414,1.414a2,2,0,0,1,0-2.828,2,2,0,0,1,2.828,0L24.483,21.654a2,2,0,0,1-1.414,3.414Z" transform="translate(9701.966 2069.966)" fill="#fff"/>
+    <path id="Line_22" data-name="Line 22" d="M0,25.068a1.994,1.994,0,0,1-1.414-.586,2,2,0,0,1,0-2.828L21.654-1.414a2,2,0,0,1,2.828,0,2,2,0,0,1,0,2.828L1.414,24.483A1.994,1.994,0,0,1,0,25.068Z" transform="translate(9701.966 2069.966)" fill="#fff"/>
+  </g>
+</svg>

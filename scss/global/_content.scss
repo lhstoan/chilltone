@@ -33,7 +33,7 @@ main {
 	background-repeat: no-repeat;
 	&--main {
 		position: absolute;
-		max-width: 1434px;
+		max-width: calc(1434px / 1920px * 100vw);
 		width: 100%;
 		left: 50%;
 		top: 50%;
@@ -45,6 +45,43 @@ main {
 	&--img {
 		position: relative;
 		width: calc(510px / 1920px * 100vw);
+	}
+	&--btn {
+		a {
+			position: relative;
+			display: inline-block;
+			padding: 14px 24px;
+			font-weight: bold;
+			font-size: 20px;
+			text-decoration: none;
+			text-transform: uppercase;
+			color: #fff;
+			border: 2px solid #fff;
+			transition: all 0.3s ease;
+
+			&:hover {
+				color: transparent;
+				background-image: url(../images/bg-home.jpg);
+				background-size: cover;
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-clip: text;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+
+				&::before {
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					background-color: #fff;
+					z-index: -1;
+					border-radius: 0;
+				}
+			}
+		}
 	}
 	&--content {
 		position: relative;
@@ -71,17 +108,6 @@ main {
 			font-family: "FatFrank";
 			letter-spacing: 0.1em;
 			margin-bottom: 45px;
-		}
-		a {
-			position: relative;
-			text-decoration: none;
-			color: #fff;
-			padding: 14px 24px;
-			line-height: 1;
-			white-space: nowrap;
-			font-weight: bold;
-			font-size: 20px;
-			border: 2px solid #fff;
 		}
 	}
 }

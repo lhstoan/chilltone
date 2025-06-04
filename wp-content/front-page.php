@@ -127,6 +127,8 @@ get_header();
 						$thumbnail_id = get_post_thumbnail_id();
 						$thumbnail_url = '';
 
+							$acf_link = get_field('url');
+
 						if ($thumbnail_id) {
 						$thumbnail_url = wp_get_attachment_url($thumbnail_id);
 						} else {
@@ -139,7 +141,7 @@ get_header();
 						}
 					?>
 				<li>
-					<a href="<?php the_permalink(); ?>" class="linkfull"></a>
+					<a href="<?php echo $acf_link ?>" class="linkfull" target="_blank"></a>
 					<img src="<?php echo esc_url($thumbnail_url); ?>" alt="<?php the_title_attribute(); ?>">
 				</li>
 				<?php

@@ -291,3 +291,32 @@ function Marquee(selector, speed, gap = 50) {
 }
 
 window.addEventListener('load', () => Marquee('.marquee', 0.5, 60)); // 60px gap
+
+
+function makeBoxSquare(selector) {
+	const boxes = document.querySelectorAll(selector)
+
+	const update = () => {
+		boxes.forEach(box => {
+			const width = box.offsetWidth
+			box.style.height = `${width}px`
+		})
+	}
+
+	// Gọi ban đầu + khi resize
+	update()
+	window.addEventListener('resize', update)
+
+	// Gọi lại khi orientation change (quay dọc/ngang)
+	window.addEventListener('orientationchange', () => {
+		setTimeout(update, 300) // delay để tránh bug layout
+	})
+}
+
+function fallbackSquare(selector) {
+	if (CSS.supports('aspect-ratio: 1 / 1')) return
+
+	makeBoxSquare(selector)
+}
+
+fallbackSquare('.iList--img')

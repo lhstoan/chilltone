@@ -51,7 +51,7 @@
 						<li><a href="<?php echo home_url(); ?>/releases/">Releases</a></li>
 						<li><a href="<?php echo home_url(); ?>/artists/">Artists</a></li>
 						<li><a href="<?php echo home_url(); ?>/playlists/">Playlists</a></li>
-						<li><a href="<?php echo home_url(); ?>/">About us</a></li>
+						<li><a href="<?php echo home_url(); ?>/contact-us/">Contact Us</a></li>
 					</ul>
 				</div>
 				<div class="iHeader--hamburger">

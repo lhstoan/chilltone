@@ -16,8 +16,8 @@ $GLOBALS['bodyClass'] = "under";
 get_header();
 ?>
 <main>
-	<section class="iList">
-		<div class="iList--wrap min">
+	<section class="iList fullWidth gap">
+		<div class="iList--wrap">
 			<ul class="iList--main async">
 				<?php
 					global $post;
@@ -50,7 +50,10 @@ get_header();
 					?>
 				<li>
 					<a href="<?php echo $acf_link ?>" class="linkfull" target="_blank"></a>
-					<img src="<?php echo esc_url($thumbnail_url); ?>" alt="<?php the_title_attribute(); ?>">
+					<div class="iList--img">
+						<img src="<?php echo esc_url($thumbnail_url); ?>" alt="<?php the_title_attribute(); ?>">
+					</div>
+
 				</li>
 				<?php
 					endwhile;

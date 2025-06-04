@@ -16,8 +16,8 @@ $GLOBALS['bodyClass'] = "under";
 get_header();
 ?>
 <main>
-	<section class="iList">
-		<div class="iList--wrap min">
+	<section class="iList fullWidth">
+		<div class="iList--wrap">
 			<ul class="iList--main async">
 				<?php
 					global $post;
@@ -37,7 +37,7 @@ get_header();
 					while ($the_query->have_posts()): $the_query->the_post();
 						$thumbnail_id = get_post_thumbnail_id();
 						$thumbnail_url = '';
-
+$acf_link = get_field('url');
 						if ($thumbnail_id) {
 						$thumbnail_url = wp_get_attachment_url($thumbnail_id);
 						} else {
@@ -50,14 +50,10 @@ get_header();
 						}
 					?>
 				<li>
-					<a href="<?php the_permalink(); ?>" class="linkfull"></a>
+					<a href="<?php echo $acf_link ?>" class="linkfull" target="_blank"></a>
 					<div class="iList--img">
 						<img src="<?php echo esc_url($thumbnail_url); ?>" alt="<?php the_title_attribute(); ?>">
 					</div>
-					<div class="iList--name">
-						<h4><?php the_title(); ?></h4>
-					</div>
-
 				</li>
 				<?php
 					endwhile;

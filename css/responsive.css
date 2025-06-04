@@ -228,6 +228,39 @@
   .iList--main li {
     width: calc(50% - var(--gap));
   }
+  .iList--name h4 {
+    font-size: 14px;
+  }
+  .iBack--wrap {
+    padding: 20px 10px;
+  }
+  .iBack a {
+    font-size: 14px;
+  }
+  .iBack a::before {
+    top: 0px;
+  }
+  .iDetail--img {
+    padding: 20px 10px;
+  }
+  .iDetail--link {
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+    gap: 10px;
+  }
+  .iDetail--link li::before {
+    content: none;
+  }
+  .iDetail--link a {
+    font-size: 16px;
+  }
+  .iDetail--desc {
+    padding: 20px 10px;
+  }
+  .marquee span {
+    font-size: 20px;
+  }
   .iFooter {
     padding: 40px 0;
     display: flex;

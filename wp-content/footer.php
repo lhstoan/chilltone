@@ -10,10 +10,12 @@ $social_media = get_field('social_media', $home_id);
 			<li><a href="<?php echo $social_media["sporty"] ?>">SPORTY</a></li>
 			<li><a href="<?php echo $social_media["instagram"] ?>">INSTAGRAM</a></li>
 			<li><a href="<?php echo $social_media["youtube"] ?>">YOUTUBE</a></li>
-			<li><a href="">CONTACT US</a></li>
+			<li><a href="<?php echo home_url(); ?>/contact-us/">CONTACT US</a></li>
 		</ul>
 		<div class="iFooter--logo">
-			<img src="<?php echo get_theme_file_uri('') ?>/images/logo.png" alt="">
+			<a href="<?php echo home_url(); ?>/">
+				<img src="<?php echo get_theme_file_uri('') ?>/images/logo.png" alt="RIOR">
+			</a>
 		</div>
 		<div class="iFooter--copyright">
 			<span>@2025 RIOR</span>

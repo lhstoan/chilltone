@@ -87,9 +87,9 @@
 		height: auto;
 		min-height: calc(100vh - 60px);
 		&--main {
-			transform: translateY(-50%);
+			transform: translate(-50%,-50%);
 			width: 100%;
-			left: 0%;
+			left: 50%;
 			top: 50%;
 			flex-direction: column;
 			gap: 20px;
@@ -135,6 +135,54 @@
 				font-size: 14px;
 			}
 		}
+		&.fullWidth {
+			padding: 0 0;
+
+			.iList {
+				&--wrap {
+					max-width: 100%;
+				}
+				&--main {
+					gap: 0;
+					li {
+						width: calc(100%);
+					}
+				}
+			}
+			&.gap {	padding: 10px;
+				width: 100%;
+				.iList {
+				
+					&--main {
+						gap: var(--gap);
+						width: 100%;
+						--gap: 10px;
+						li {
+							width: calc(100%);
+						}
+					}
+				}
+			}
+		}
+		&.artists{
+			.iList {
+				&--wrap {
+					max-width: 100%;
+				}
+				&--main {
+					gap: 10px;
+					width: 100%;
+					li {
+						width: calc(100%);
+					}
+				}
+				&--name{
+					h4{
+						font-size: 20px;
+					}
+				}
+			}
+		}
 	}
 	.iBack--wrap {
 		padding: 20px 10px;
@@ -175,17 +223,88 @@
 		}
 	}
 	.iFooter {
-		padding: 40px 0;
+		padding: 40px 10px;
 		display: flex;
-		flex-direction: column;
+		align-items: flex-start;
+	        flex-direction: row-reverse;
+		.img {
+			height: 40px;
+			position: relative;
+			margin-bottom: 10px;
+			text-align: right;
+			img {
+				height: 100%;
+			}
+		}
+		&--copyright {
+			text-align: right;
+		}
 		&--link {
 			flex-direction: column;
-			gap: 10px;
+			gap: 0px;
 			margin-bottom: 0px;
-			margin-top: 30px;
+			margin-top: 0px;
 			order: 2;
+			margin-right: auto;
 			li {
-				text-align: center;
+				text-align: left;
+			}
+		}
+	}
+
+	.iContact {
+		padding: 30px 10px;
+		&--wrap {
+			flex-direction: column;
+		}
+		&--info {
+			width: 100%;
+			padding: 10px;
+			&-title {
+				margin-bottom: 20px;
+				.title {
+					font-size: 30px;
+				}
+				.desc {
+					font-size: 14px;
+				}
+			}
+		}
+		&--group {
+			gap: 10px;
+		}
+		&--item {
+			width: 100%;
+			gap: 10px;
+			font-size: 14px;
+			--s: 46px;
+
+			&-icon {
+				img {
+					width: 24px;
+				}
+			}
+			&-content {
+				font-size: 14px;
+			}
+		}
+		&--form {
+			width: 100%;
+			padding: 10px;
+
+			--fz: 14px;
+
+			&-group {
+				flex-direction: column;
+				.iContact--form-item {
+					width: 100%;
+				}
+			}
+
+			&-item {
+				label {
+					font-size: 14px;
+				}
 			}
 		}
 	}
@@ -220,6 +339,57 @@
 /* END min-width:475px && screen-max:750px */
 
 @media screen and (min-width: 525px) and (max-width: 750px) {
+		.iList {
+	
+		&.fullWidth {
+			padding: 0 0;
+
+			.iList {
+				&--wrap {
+					max-width: 100%;
+				}
+				&--main {
+					gap: 0;
+					li {
+						width: calc(100%);
+					}
+				}
+			}
+			&.gap {	padding: 10px;
+				width: 100%;
+				.iList {
+				
+					&--main {
+						gap: var(--gap);
+						width: calc(100% + 10px);
+						--gap: 10px;
+						li {
+							width: calc(100% / 2 - var(--gap));
+						}
+					}
+				}
+			}
+		}
+			&.artists{
+			.iList {
+				&--wrap {
+					max-width: 100%;
+				}
+				&--main {
+					gap: 10px;
+					width: 100%;
+					li {
+						width: calc(100% / 2 - 10px);
+					}
+				}
+				&--name{
+					h4{
+						font-size: 20px;
+					}
+				}
+			}
+		}
+	}
 }
 
 /* END min-width:525px && screen-max:750px */

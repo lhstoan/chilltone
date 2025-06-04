@@ -48,11 +48,11 @@
 				</div>
 				<div class="iHeader--menu">
 					<ul class="iHeader--list">
-						<li><a href="<?php echo home_url(); ?>/releases/">Releases</a></li>
-						<li><a href="<?php echo home_url(); ?>/artists/">Artists</a></li>
-						<li><a href="<?php echo home_url(); ?>/playlists/">Playlists</a></li>
-						<li><a href="<?php echo home_url(); ?>/contact-us/">Contact Us</a></li>
-					</ul>
+  <li class="<?= is_active('releases') ?>"><a href="<?= home_url(); ?>/releases/">Releases</a></li>
+  <li class="<?= is_active('artists') ?>"><a href="<?= home_url(); ?>/artists/">Artists</a></li>
+  <li class="<?= is_active('playlists') ?>"><a href="<?= home_url(); ?>/playlists/">Playlists</a></li>
+  <li class="<?= is_active('contact-us') ?>"><a href="<?= home_url(); ?>/contact-us/">Contact Us</a></li>
+</ul>
 				</div>
 				<div class="iHeader--hamburger">
 					<div class="hamburger" id="hamburgerMenu">

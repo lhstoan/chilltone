@@ -16,7 +16,7 @@ $GLOBALS['bodyClass'] = "under";
 get_header();
 ?>
 <main>
-	<section class="iList">
+	<section class="iList artists">
 		<div class="iList--wrap min">
 			<ul class="iList--main async">
 				<?php

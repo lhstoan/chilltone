@@ -37,68 +37,47 @@ get_header();
 		<div class="iList--wrap">
 			<h3 class="iList--title">NEW RELEASES</h3>
 			<ul class="iList--main">
-				<?php
-					global $post;
-					$paged = get_query_var('paged') ? get_query_var('paged') : 1;
+<?php
+global $post;
+$paged = get_query_var('paged') ? get_query_var('paged') : 1;
 
-					$args = array(
-					'post_type' => 'releases',
-					'orderby' => 'date',
-					'order' => 'desc',
-					'posts_per_page' => 4,
-					'paged' => $paged,
-					);
+$args = array(
+	'post_type' => 'releases',
+	'orderby' => 'date',
+	'order' => 'desc',
+	'posts_per_page' => 4,
+	'paged' => $paged,
+);
 
-					$the_query = new WP_Query($args);
+$the_query = new WP_Query($args);
 
-					if ($the_query->have_posts()):
-					while ($the_query->have_posts()): $the_query->the_post();
-						$thumbnail_id = get_post_thumbnail_id();
-						$thumbnail_url = '';
-	
-						$acf_link = get_field('url');
+if ($the_query->have_posts()):
+	while ($the_query->have_posts()): $the_query->the_post();
+		$acf_link = get_field('url');
+		$thumbnail_id = get_post_thumbnail_id();
+		$yt_thumb = get_youtube_thumbnail_best($acf_link);
+		$thumbnail_url = '';
 
-						function get_youtube_thumbnail_best($url) {
-							if (preg_match('/(?:youtube\.com\/.*v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/', $url, $matches)) {
-								$video_id = $matches[1];
-								$base = 'https://img.youtube.com/vi/' . $video_id . '/';
-								
-								$maxres = $base . 'maxresdefault.jpg';
-								if (@getimagesize($maxres)) {
-									return $maxres;
-								}
-								
-								$sd = $base . 'sddefault.jpg';
-								if (@getimagesize($sd)) {
-									return $sd;
-								}
-								
-								return $base . 'hqdefault.jpg';
-							}
-							return false;
-						}
-
-						$yt_thumb = get_youtube_thumbnail_best($acf_link);
-						if ($thumbnail_id) {
-							$thumbnail_url = wp_get_attachment_url($thumbnail_id);
-						} elseif ($acf_image = get_field('image')) {
-							$thumbnail_url = $acf_image;
-						} elseif ($yt_thumb) {
-							$thumbnail_url = $yt_thumb;
-						} else {
-							$thumbnail_url = get_theme_file_uri('images/HINH1.jpg');
-						}
-					?>
-				<li>
-					<a href="<?php echo $acf_link ?>" class="linkfull" target="_blank"></a>
-					<img src="<?php echo esc_url($thumbnail_url); ?>" alt="<?php the_title(); ?>">
-				</li>
-				<?php
-					endwhile;
-					wp_reset_postdata();
-					endif;
-					?>
-			</ul>
+		if ($thumbnail_id) {
+			$thumbnail_url = wp_get_attachment_url($thumbnail_id);
+		} elseif ($acf_image = get_field('image')) {
+			$thumbnail_url = $acf_image;
+		} elseif ($yt_thumb) {
+			$thumbnail_url = $yt_thumb;
+		} else {
+			$thumbnail_url = get_theme_file_uri('images/HINH1.jpg');
+		}
+		?>
+		<li>
+			<a href="<?php echo esc_url($acf_link); ?>" class="linkfull" target="_blank"></a>
+			<img src="<?php echo esc_url($thumbnail_url); ?>" alt="<?php the_title(); ?>">
+		</li>
+		<?php
+	endwhile;
+	wp_reset_postdata();
+endif;
+?>
+</ul>
 			<div class="iList--btn">
 				<a href="<?php echo home_url(); ?>/releases/" class="ibtn">View all</a>
 			</div>
@@ -106,7 +85,7 @@ get_header();
 	</section>
 	<section class="iList">
 		<div class="iList--wrap">
-			<h3 class="iList--title">Playlists</h3>
+			<h3 class="iList--title">PLAYLIST</h3>
 			<ul class="iList--main">
 				<?php
 					global $post;

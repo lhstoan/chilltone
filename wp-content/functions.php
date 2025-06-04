@@ -100,4 +100,32 @@ add_action('admin_head-post.php', function() {
     </style>';
   }
 });
+
+function is_active($slug) {
+  return (is_page($slug) || is_post_type_archive($slug)) ? 'active' : '';
+}
+function console_log($data, $label = 'PHP') {
+  echo '<script>';
+  echo 'console.log(' . json_encode($label) . ', ' . json_encode($data) . ');';
+  echo '</script>';
+}
+
+function get_youtube_thumbnail_best($url) {
+	if (preg_match('/(?:youtube\.com\/.*v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/', $url, $matches)) {
+		$video_id = $matches[1];
+		$base = 'https://img.youtube.com/vi/' . $video_id . '/';
+		
+		$maxres = $base . 'maxresdefault.jpg';
+		if (@getimagesize($maxres)) return $maxres;
+		
+		$sd = $base . 'sddefault.jpg';
+		if (@getimagesize($sd)) return $sd;
+		
+		return $base . 'hqdefault.jpg';
+	}
+	return false;
+}
+
+
 ?>
+

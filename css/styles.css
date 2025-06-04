@@ -750,6 +750,7 @@ header {
   background-color: #fff;
   z-index: 99;
   height: 103px;
+  border-bottom: 1px solid #fff;
 }
 
 .iHeader {
@@ -796,6 +797,9 @@ header {
   color: #fff;
 }
 .iHeader--menu ul li a:hover {
+  color: #e8da5d;
+}
+.iHeader--menu ul li.active a {
   color: #e8da5d;
 }
 .iHeader--hamburger {
@@ -864,14 +868,14 @@ header {
 }
 
 #artists main {
-  background-color: #e7e2d3 !important;
+  background-color: hsl(55.38, 37.14%, 93.14%) !important;
 }
 
 main {
   margin-top: 103px;
   position: relative;
   width: 100%;
-  background-color: #333;
+  background-color: #000;
 }
 
 .iMainvisual {
@@ -1379,7 +1383,7 @@ main {
 /*==========================================================================*/
 .iFooter {
   position: relative;
-  background-color: #333;
+  background-color: #000;
   padding: 50px 0;
   border-top: 1px solid #fff;
 }
@@ -1404,13 +1408,17 @@ main {
   font-size: 20px;
 }
 .iFooter--link a:hover {
-  color: #ffcc00;
+  color: #e8da5d;
 }
 .iFooter--logo {
   position: relative;
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
+  flex-direction: column;
+}
+.iFooter--logo .img {
+  text-align: center;
 }
 .iFooter--logo img {
   height: 60px;
@@ -1419,8 +1427,23 @@ main {
   position: relative;
   text-align: center;
   color: #fff;
-  font-family: "FatFrank";
   font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.iFooter--copyright span {
+  display: block;
+  font-family: var(--font-family);
+}
+.iFooter--copyright a {
+  text-decoration: none;
+  position: relative;
+  font-size: 18px;
+  color: #fff;
+}
+.iFooter--copyright a:hover {
+  color: #e8da5d;
 }
 
 /*==========================================================================*/

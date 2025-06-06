@@ -87,7 +87,7 @@
 		height: auto;
 		min-height: calc(100vh - 60px);
 		&--main {
-			transform: translate(-50%,-50%);
+			transform: translate(-50%, -50%);
 			width: 100%;
 			left: 50%;
 			top: 50%;
@@ -149,11 +149,12 @@
 					}
 				}
 			}
-			&.gap {	padding: 10px;
+			&.gap {
+				padding: 10px;
 				width: 100%;
 				.iList {
-				
 					&--main {
+						padding-left: 0;
 						gap: var(--gap);
 						width: 100%;
 						--gap: 10px;
@@ -164,7 +165,7 @@
 				}
 			}
 		}
-		&.artists{
+		&.artists {
 			.iList {
 				&--wrap {
 					max-width: 100%;
@@ -176,8 +177,8 @@
 						width: calc(100%);
 					}
 				}
-				&--name{
-					h4{
+				&--name {
+					h4 {
 						font-size: 20px;
 					}
 				}
@@ -226,7 +227,7 @@
 		padding: 40px 10px;
 		display: flex;
 		align-items: flex-start;
-	        flex-direction: row-reverse;
+		flex-direction: row-reverse;
 		.img {
 			height: 40px;
 			position: relative;
@@ -339,8 +340,7 @@
 /* END min-width:475px && screen-max:750px */
 
 @media screen and (min-width: 525px) and (max-width: 750px) {
-		.iList {
-	
+	.iList {
 		&.fullWidth {
 			padding: 0 0;
 
@@ -355,14 +355,15 @@
 					}
 				}
 			}
-			&.gap {	padding: 10px;
+			&.gap {
+				padding: 10px;
 				width: 100%;
 				.iList {
-				
 					&--main {
 						gap: var(--gap);
 						width: calc(100% + 10px);
 						--gap: 10px;
+
 						li {
 							width: calc(100% / 2 - var(--gap));
 						}
@@ -370,7 +371,7 @@
 				}
 			}
 		}
-			&.artists{
+		&.artists {
 			.iList {
 				&--wrap {
 					max-width: 100%;
@@ -382,8 +383,8 @@
 						width: calc(100% / 2 - 10px);
 					}
 				}
-				&--name{
-					h4{
+				&--name {
+					h4 {
 						font-size: 20px;
 					}
 				}

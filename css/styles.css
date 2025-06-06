@@ -750,7 +750,6 @@ header {
   background-color: #fff;
   z-index: 99;
   height: 103px;
-  border-bottom: 1px solid #fff;
 }
 
 .iHeader {
@@ -871,6 +870,13 @@ header {
   background-color: hsl(55.38, 37.14%, 93.14%) !important;
 }
 
+#contact main {
+  min-height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 main {
   margin-top: 103px;
   position: relative;
@@ -985,7 +991,7 @@ main {
   font-size: 20px;
   font-family: "FatFrank";
   line-height: 1.4em;
-  margin-bottom: 1.4em;
+  margin-bottom: 1em;
   letter-spacing: 0.1em;
 }
 .iList--main {
@@ -1081,12 +1087,25 @@ main {
 .iList.fullWidth .iList--main li {
   width: 25%;
 }
+.iList.fullWidth.gap {
+  padding: 10px 0 9px;
+}
 .iList.fullWidth.gap .iList--main {
+  padding-left: var(--gap);
   gap: var(--gap);
   --gap: 10px;
 }
 .iList.fullWidth.gap .iList--main li {
   width: calc(25% - var(--gap));
+}
+.iList.releases .iList--main li {
+  overflow: unset;
+}
+.iList.releases .iList--main li:hover {
+  z-index: 10;
+}
+.iList.releases .iList--main li:hover .iList--img {
+  overflow: unset;
 }
 
 .linkfull {
@@ -1318,15 +1337,14 @@ main {
 .iContact--form {
   position: relative;
   width: calc(50% - 20px);
-  padding: 20px;
-  background-color: #fff;
+  padding: 0 20px;
   --fz: 20px;
 }
 .iContact--form-body {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 .iContact--form-group {
   position: relative;
@@ -1347,15 +1365,28 @@ main {
 }
 .iContact--form-item label {
   position: relative;
-  color: #6c6666;
+  color: #fff;
   font-size: 16px;
   font-family: var(--font-family);
   font-weight: bold;
   margin-bottom: 5px;
 }
+.iContact--form-item label span {
+  font-weight: 500;
+  font-size: 0.8em;
+  color: #ccc;
+}
 .iContact--form-item textarea {
   resize: none;
   font-size: 15px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+}
+.iContact--form-item input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
 }
 .iContact--form-btn {
   position: relative;
@@ -1366,8 +1397,10 @@ main {
   align-items: center;
 }
 .iContact--form-btn .ibtn {
-  background-color: #111111;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
+  padding: 20px 30px;
+  cursor: pointer;
 }
 .iContact--form .wpcf7-response-output {
   margin: 2em 0.5em 1em;

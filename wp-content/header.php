@@ -12,7 +12,7 @@
 	<meta http-equiv="Content-Script-Type" content="text/javascript" />
 
 	<!-- FAVICON -->
-	<link rel="icon" href="https://www.sa-obi.net/wp-content/themes/sa-obi/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="<?php echo get_theme_file_uri('') ?>/favicon.ico" type="image/x-icon">
 	<link rel="apple-touch-icon" sizes="180x180"
 		href="<?php echo get_theme_file_uri('') ?>/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32"
@@ -33,7 +33,10 @@
 		font-display: swap;
 	}
 	</style>
-	<?php wp_head(); ?>
+	<?php 
+	 $home_id = 62;
+	$logo = get_field('logo', $home_id);
+	wp_head(); ?>
 </head>
 
 <body id="<?php echo isset($GLOBALS['bodyID']) ? $GLOBALS['bodyID'] : ""; ?>"
@@ -43,7 +46,7 @@
 			<div class="iHeader">
 				<div class="iHeader--logo">
 					<a href="<?php echo home_url(); ?>/">
-						<img src="<?php echo get_theme_file_uri('') ?>/images/logo.png" alt="RIOR">
+						<img src="<?php echo get_field('logo', $home_id) ?>" alt="RIOR">
 					</a>
 				</div>
 				<div class="iHeader--menu">

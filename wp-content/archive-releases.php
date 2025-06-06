@@ -8,7 +8,7 @@ $GLOBALS['h1'] = "";
 
 
 // ID of <body> 
-$GLOBALS['bodyID'] = "";
+$GLOBALS['bodyID'] = "artists";
 
 // Class of <body>
 $GLOBALS['bodyClass'] = "under";
@@ -16,7 +16,7 @@ $GLOBALS['bodyClass'] = "under";
 get_header();
 ?>
 <main>
-	<section class="iList fullWidth">
+	<section class="iList fullWidth releases">
 		<div class="iList--wrap">
 			<ul class="iList--main async">
 				<?php

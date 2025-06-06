@@ -79,13 +79,13 @@ endif;
 ?>
 </ul>
 			<div class="iList--btn">
-				<a href="<?php echo home_url(); ?>/releases/" class="ibtn">View all</a>
+				<a href="<?php echo home_url(); ?>/releases/" class="ibtn">VIEW ALL</a>
 			</div>
 		</div>
 	</section>
 	<section class="iList">
 		<div class="iList--wrap">
-			<h3 class="iList--title">PLAYLIST</h3>
+			<h3 class="iList--title">PLAYLISTS </h3>
 			<ul class="iList--main">
 				<?php
 					global $post;
@@ -131,7 +131,7 @@ endif;
 
 			</ul>
 			<div class="iList--btn">
-				<a href="<?php echo home_url(); ?>/playlists/" class="ibtn">View all</a>
+				<a href="<?php echo home_url(); ?>/playlists/" class="ibtn">VIEW ALL</a>
 			</div>
 		</div>
 	</section>

@@ -188,6 +188,7 @@
     width: 100%;
   }
   .iList.fullWidth.gap .iList--main {
+    padding-left: 0;
     gap: var(--gap);
     width: 100%;
     --gap: 10px;

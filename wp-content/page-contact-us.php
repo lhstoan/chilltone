@@ -4,10 +4,10 @@ if ( have_posts() ):
 		the_post();
 
 		// ID of <body> 
-		$GLOBALS['bodyID'] = "";
+		$GLOBALS['bodyID'] = "contact";
 
 		// Class of <body>
-		$GLOBALS['bodyClass'] = "under";
+		$GLOBALS['bodyClass'] = "under contact";
 
 		$introduction_text = get_field('introduction_text'); 
 		$company_name = get_field('company_information')['company_name'] ?? '';

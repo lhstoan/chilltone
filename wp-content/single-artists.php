@@ -7,7 +7,7 @@ if ( have_posts() ):
 		$terms = wp_get_post_terms($post->ID, 'blog-category', '');
 
 		// ID of <body> 
-		$GLOBALS['bodyID'] = "";
+		$GLOBALS['bodyID'] = "artists";
 
 		// Class of <body>
 		$GLOBALS['bodyClass'] = "under";
@@ -31,7 +31,7 @@ if ( have_posts() ):
 	<section class="iDetail">
 		<div class="iBack">
 			<div class="iBack--wrap">
-				<a href="<?php echo home_url(); ?>/artists"> Back to Artists</a>
+				<a href="<?php echo home_url(); ?>/artists"> BACK TO ARTISTS</a>
 			</div>
 		</div>
 		<div class="iDetail--img">
@@ -40,12 +40,34 @@ if ( have_posts() ):
 		<div class="marquee">
 			<span><?php echo the_title() ?></span>
 		</div>
-		<ul class="iDetail--link">
-			<li><a href="<?php echo $website; ?>">Website</a></li>
-			<li><a href="<?php echo $spotify; ?>">Spotify</a></li>
-			<li><a href="<?php echo $instagram; ?>">Instagram</a></li>
-			<li><a href="<?php echo $tour_dates; ?>">Tour Dates</a></li>
-		</ul>
+	
+
+
+<?php
+$gr = get_field('gr_socail');
+
+$items = [];
+
+for ($i = 1; $i <= 6; $i++) {
+  $title = $gr["title_0$i"] ?? '';
+  $link = $gr["link_0$i"] ?? '';
+
+  if (!empty($title) && !empty($link)) {
+    $items[] = [
+      'title' => $title,
+      'link'  => $link
+    ];
+  }
+}
+
+if (!empty($items)) {
+ echo '<ul class="iDetail--link">';
+  foreach ($items as $item) {
+    echo '<li><a href="' . esc_url($item['link']) . '">' . esc_html($item['title']) . '</a></li>';
+  }
+  echo '</ul>';
+}
+?>
 		<div class="iDetail--desc">
 			<div class="iDetail--wrap">
 				<?php echo $description; ?>

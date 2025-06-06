@@ -15,6 +15,14 @@
 	}
 }
 
+#contact {
+	main {
+		min-height: calc(100vh - 100px);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
 main {
 	margin-top: 103px;
 	position: relative;
@@ -134,7 +142,7 @@ main {
 		font-size: 20px;
 		font-family: "FatFrank";
 		line-height: 1.4em;
-		margin-bottom: 1.4em;
+		margin-bottom: 1em;
 		letter-spacing: 0.1em;
 	}
 	&--main {
@@ -240,12 +248,29 @@ main {
 			}
 		}
 		&.gap {
+			padding: 10px 0 9px;
 			.iList {
 				&--main {
+					padding-left: var(--gap);
 					gap: var(--gap);
 					--gap: 10px;
 					li {
 						width: calc(100% / 4 - var(--gap));
+					}
+				}
+			}
+		}
+	}
+	&.releases {
+		.iList {
+			&--main {
+				li {
+					overflow: unset;
+					&:hover {
+						z-index: 10;
+						.iList--img {
+							overflow: unset;
+						}
 					}
 				}
 			}
@@ -484,14 +509,13 @@ main {
 	&--form {
 		position: relative;
 		width: calc(100% / 2 - 20px);
-		padding: 20px;
-		background-color: #fff;
+		padding: 0 20px;
 		--fz: 20px;
 		&-body {
 			position: relative;
 			display: flex;
 			flex-direction: column;
-			gap: 10px;
+			gap: 20px;
 		}
 		&-group {
 			position: relative;
@@ -511,15 +535,28 @@ main {
 			position: relative;
 			label {
 				position: relative;
-				color: #6c6666;
+				color: #fff;
 				font-size: 16px;
 				font-family: var(--font-family);
 				font-weight: bold;
 				margin-bottom: 5px;
+				span {
+					font-weight: 500;
+					font-size: 0.8em;
+					color: #ccc;
+				}
 			}
 			textarea {
 				resize: none;
 				font-size: 15px;
+				background-color: transparent;
+				border: none;
+				border-bottom: 1px solid #fff;
+			}
+			input {
+				background-color: transparent;
+				border: none;
+				border-bottom: 1px solid #fff;
 			}
 		}
 		&-btn {
@@ -530,8 +567,10 @@ main {
 				align-items: center;
 			}
 			.ibtn {
-				background-color: #111111;
-				color: #fff;
+				background-color: #fff;
+				color: #000;
+				padding: 20px 30px;
+				cursor: pointer;
 			}
 		}
 		.wpcf7-response-output {

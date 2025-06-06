@@ -8,7 +8,7 @@ $GLOBALS['h1'] = "";
 
 
 // ID of <body> 
-$GLOBALS['bodyID'] = "";
+$GLOBALS['bodyID'] = "artists";
 
 // Class of <body>
 $GLOBALS['bodyClass'] = "under";

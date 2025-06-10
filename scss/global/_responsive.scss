@@ -219,17 +219,9 @@
 			padding: 20px 10px;
 		}
 		&--link {
-			flex-direction: column;
-			padding: 10px;
-			text-align: center;
-			gap: 10px;
-			li {
-				&::before {
-					content: none;
-				}
-			}
+			padding: 20px 10px;
 			a {
-				font-size: 16px;
+				font-size: 15px;
 			}
 		}
 		&--desc {
@@ -341,6 +333,7 @@
 
 	&--main {
 		--gap: 15px;
+		width:100%;
 		li {
 				width: calc(100%);
 

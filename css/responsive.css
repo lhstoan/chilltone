@@ -234,16 +234,10 @@
     padding: 20px 10px;
   }
   .iDetail--link {
-    flex-direction: column;
-    padding: 10px;
-    text-align: center;
-    gap: 10px;
-  }
-  .iDetail--link li::before {
-    content: none;
+    padding: 20px 10px;
   }
   .iDetail--link a {
-    font-size: 16px;
+    font-size: 15px;
   }
   .iDetail--desc {
     padding: 20px 10px;
@@ -339,6 +333,7 @@
   }
   .uPlaylist--main {
     --gap: 15px;
+    width: 100%;
   }
   .uPlaylist--main li {
     width: 100%;

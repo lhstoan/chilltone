@@ -1,3 +1,9 @@
+	<?php 
+	 $home_id = 62;
+	$logo = get_field('logo', $home_id);
+	$favicon = get_field('favicon', $home_id);
+?>
+
 <!Doctype html>
 <html lang="ja">
 
@@ -12,18 +18,9 @@
 	<meta http-equiv="Content-Script-Type" content="text/javascript" />
 
 	<!-- FAVICON -->
-	<link rel="icon" href="<?php echo get_theme_file_uri('') ?>/favicon.ico" type="image/x-icon">
-	<link rel="apple-touch-icon" sizes="180x180"
-		href="<?php echo get_theme_file_uri('') ?>/favicon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32"
-		href="<?php echo get_theme_file_uri('') ?>/favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16"
-		href="<?php echo get_theme_file_uri('') ?>/favicon/favicon-16x16.png">
-	<link rel="manifest" crossorigin="use-credentials"
-		href="<?php echo get_theme_file_uri('') ?>/favicon/site.webmanifest">
-
-	<meta property="og:image" content="<?php echo get_theme_file_uri('') ?>/images/ogp.jpg">
-	<meta name="thumbnail" content="<?php echo get_theme_file_uri('') ?>/images/thumbnail.jpg">
+	<link rel="icon" href="<?php echo get_field('favicon', $home_id) ?>" type="image/x-icon">
+	<!-- <meta property="og:image" content="<?php echo get_theme_file_uri('') ?>/images/ogp.jpg"> -->
+	<!-- <meta name="thumbnail" content="<?php echo get_theme_file_uri('') ?>/images/thumbnail.jpg"> -->
 	<style>
 	@font-face {
 		font-family: "FatFrank";
@@ -34,8 +31,6 @@
 	}
 	</style>
 	<?php 
-	 $home_id = 62;
-	$logo = get_field('logo', $home_id);
 	wp_head(); ?>
 </head>
 

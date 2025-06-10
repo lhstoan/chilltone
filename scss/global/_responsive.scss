@@ -184,6 +184,24 @@
 				}
 			}
 		}
+		&.releases {
+			.iList {
+				&--wrap {
+					max-width: 100%;
+				}
+				&--main {
+					width: 100%;
+					li {
+						width: calc(100% / 2);
+					}
+				}
+				&--name {
+					h4 {
+						font-size: 20px;
+					}
+				}
+			}
+		}
 	}
 	.iBack--wrap {
 		padding: 20px 10px;
@@ -309,7 +327,27 @@
 			}
 		}
 	}
+	.iPlaylist {
+		&--main {
+			flex-wrap: wrap;
+			li {
+				width: calc(100%);
+			}
+		}
+	}
+.uPlaylist {
 
+	padding: 40px 15px;
+
+	&--main {
+		--gap: 15px;
+		li {
+				width: calc(100%);
+
+			
+		}
+	}
+}
 	//END STICKY FOOTER
 }
 
@@ -381,6 +419,24 @@
 					width: 100%;
 					li {
 						width: calc(100% / 2 - 10px);
+					}
+				}
+				&--name {
+					h4 {
+						font-size: 20px;
+					}
+				}
+			}
+		}
+		&.releases {
+			.iList {
+				&--wrap {
+					max-width: 100%;
+				}
+				&--main {
+					width: 100%;
+					li {
+						width: calc(100% / 2);
 					}
 				}
 				&--name {

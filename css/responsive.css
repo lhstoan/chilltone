@@ -209,6 +209,18 @@
   .iList.artists .iList--name h4 {
     font-size: 20px;
   }
+  .iList.releases .iList--wrap {
+    max-width: 100%;
+  }
+  .iList.releases .iList--main {
+    width: 100%;
+  }
+  .iList.releases .iList--main li {
+    width: 50%;
+  }
+  .iList.releases .iList--name h4 {
+    font-size: 20px;
+  }
   .iBack--wrap {
     padding: 20px 10px;
   }
@@ -316,6 +328,21 @@
   .iContact--form-item label {
     font-size: 14px;
   }
+  .iPlaylist--main {
+    flex-wrap: wrap;
+  }
+  .iPlaylist--main li {
+    width: 100%;
+  }
+  .uPlaylist {
+    padding: 40px 15px;
+  }
+  .uPlaylist--main {
+    --gap: 15px;
+  }
+  .uPlaylist--main li {
+    width: 100%;
+  }
 }
 /* END min-width:1px && screen-max:750px */
 @media screen and (min-width: 375px) and (max-width: 750px) {
@@ -372,6 +399,18 @@
     width: calc(50% - 10px);
   }
   .iList.artists .iList--name h4 {
+    font-size: 20px;
+  }
+  .iList.releases .iList--wrap {
+    max-width: 100%;
+  }
+  .iList.releases .iList--main {
+    width: 100%;
+  }
+  .iList.releases .iList--main li {
+    width: 50%;
+  }
+  .iList.releases .iList--name h4 {
     font-size: 20px;
   }
 }

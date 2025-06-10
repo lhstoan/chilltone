@@ -16,9 +16,9 @@ $GLOBALS['bodyClass'] = "under";
 get_header();
 ?>
 <main>
-	<section class="iList fullWidth gap">
-		<div class="iList--wrap">
-			<ul class="iList--main async">
+	<section class="uPlaylist">
+		<div class="uPlaylist--wrap">
+			<ul class="uPlaylist--main ">
 				<?php
 					global $post;
 					$paged = get_query_var('paged') ? get_query_var('paged') : 1;
@@ -34,27 +34,15 @@ get_header();
 
 					if ($the_query->have_posts()):
 					while ($the_query->have_posts()): $the_query->the_post();
-						$thumbnail_id = get_post_thumbnail_id();
-						$thumbnail_url = '';
+			
 						$acf_link = get_field('url');
-						if ($thumbnail_id) {
-						$thumbnail_url = wp_get_attachment_url($thumbnail_id);
-						} else {
-						$acf_image = get_field('image');
-							if (!empty($acf_image)) {
-								$thumbnail_url = $acf_image;
-							} else {
-								$thumbnail_url = get_theme_file_uri('images/HINH1.jpg');
-							}
-						}
+							$embed_url = str_replace('open.spotify.com/', 'open.spotify.com/embed/', $acf_link);
+						
 					?>
 				<li>
-					<a href="<?php echo $acf_link ?>" class="linkfull" target="_blank"></a>
-					<div class="iList--img">
-						<img src="<?php echo esc_url($thumbnail_url); ?>" alt="<?php the_title_attribute(); ?>">
-					</div>
-
-				</li>
+			<iframe  	src="<?php echo esc_url($embed_url); ?>" width="100%" height="390" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+			
+		</li>
 				<?php
 					endwhile;
 					wp_reset_postdata();

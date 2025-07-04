@@ -1,0 +1,72 @@
+# BEGIN LSCACHE
+# END LSCACHE
+# BEGIN NON_LSCACHE
+# END NON_LSCACHE
+
+
+#SITEGUARD_PLUGIN_SETTINGS_START
+#==== SITEGUARD_RENAME_LOGIN_SETTINGS_START
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteBase /
+    RewriteRule ^wp-signup\.php 404-siteguard [L]
+    RewriteRule ^wp-activate\.php 404-siteguard [L]
+    RewriteRule ^login_67856(.*)$ wp-login.php$1 [L]
+</IfModule>
+#==== SITEGUARD_RENAME_LOGIN_SETTINGS_END
+#SITEGUARD_PLUGIN_SETTINGS_END
+
+# BEGIN WordPress
+# The directives (lines) between "BEGIN WordPress" and "END WordPress" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+
+# BEGIN Block Vietnam IPs
+<Limit GET POST>
+Order Allow,Deny
+Allow from all
+
+# Vietnam IP ranges
+Deny from 1.52.0.0/14
+Deny from 14.160.0.0/11
+Deny from 27.64.0.0/11
+Deny from 42.112.0.0/13
+Deny from 101.96.0.0/12
+Deny from 103.0.0.0/12
+Deny from 113.160.0.0/11
+Deny from 115.72.0.0/13
+Deny from 116.96.0.0/11
+Deny from 117.0.0.0/13
+Deny from 118.68.0.0/14
+Deny from 119.15.160.0/19
+Deny from 120.72.80.0/20
+Deny from 123.16.0.0/12
+Deny from 125.212.128.0/17
+Deny from 171.224.0.0/11
+Deny from 172.104.32.0/20
+Deny from 203.113.128.0/18
+Deny from 203.119.8.0/21
+Deny from 203.190.160.0/19
+Deny from 222.252.0.0/14
+Deny from 2402:800::/32
+Deny from 2405:4800::/32
+Deny from 2406:8800::/32
+Deny from 2407:aa80::/32
+Deny from 2408:8400::/32
+Deny from 2409:8c00::/32
+Deny from 2a0e:2b40::/29
+</Limit>
+# END Block Vietnam IPs
+
+
